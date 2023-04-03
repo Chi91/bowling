@@ -25,7 +25,6 @@ public class CalculatorLogic {
     private int thirdScore = 0;
     private boolean wasStrike = false;
 
-
     /**
      * simulate an throw of an player
      * limits the possible score
@@ -56,11 +55,6 @@ public class CalculatorLogic {
                 checkResult(result);
             }
         }
-      /*  else{
-        //    gameOver = true;
-      //      Log.d("MainActivity","Game Over");
-       //     resetGame();
-        }*/
     }
     /**
      *  Check which throw it is and what kind of score it is
@@ -98,7 +92,6 @@ public class CalculatorLogic {
             }
             else{
                 secondScore = number;
-             //   Log.d("MainActivity","Wert firstscore: " +firstScore + " Wert secondscore: " + secondScore);
                 addValueToCollection(Integer.toString(firstScore),Integer.toString(secondScore));
                 calculateScore();
                 roundOver = true;
@@ -131,11 +124,9 @@ public class CalculatorLogic {
             calcCurrentScore(result);
             spare = false;
         }
-
         else if(spare && round == 9){
             totalValue[round] = totalValue[round-1] + 10 + thirdScore;
             spare = false;
-
         }
         else if(strike && round == 1){
             totalValue[round-1] = 10 + result;
